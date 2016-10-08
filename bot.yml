@@ -1,0 +1,3 @@
+name: GitLab CI bot
+description: GitLab CI slackbot (beepboophq.com version)
+avatar: resources/avatar.png

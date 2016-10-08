@@ -1,6 +1,8 @@
 var Botkit = require('botkit')
 
 var token = process.env.SLACK_TOKEN
+var gitLabUrl = process.env.GITLAB_URL
+var gitLabToken = process.env.GITLAB_TOKEN
 
 var controller = Botkit.slackbot({
     // reconnect to Slack RTM when connection goes bad
@@ -28,14 +30,6 @@ if (token) {
     require('beepboop-botkit').start(controller, {debug: true})
 }
 
-controller.hears('build', ['direct_message', 'direct_mention'], function (bot, message) {
-    // TODO start gitlab build
-    bot.reply(message, "i hear you")
-})
+const GitLabSlackCommands = require('./commands/GitLabSlackCommands')
 
-controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
-    var help = 'I will respond to the following messages: \n' +
-        '`help` to see this again.\n' +
-        '`build <project-namespace>/<project-name> <ref> <env-name>=<env-value>,<env2-name>=<env2-value>,<bool-env-name>` for a start build.'
-    bot.reply(message, help)
-})
+new GitLabSlackCommands(controller, gitLabUrl, gitLabToken)

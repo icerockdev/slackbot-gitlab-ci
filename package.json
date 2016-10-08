@@ -1,0 +1,29 @@
+{
+  "name": "slackbot-gitlab-ci",
+  "version": "1.0.0",
+  "description": "GitLab CI slackbot (beepboophq.com version)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icerockdev/slackbot-gitlab-ci.git"
+  },
+  "keywords": [
+    "gitlab",
+    "slack",
+    "bot"
+  ],
+  "author": "Aleksey Mikhailov <Aleksey.Mikhailov@icerockdev.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icerockdev/slackbot-gitlab-ci/issues"
+  },
+  "homepage": "https://github.com/icerockdev/slackbot-gitlab-ci#readme",
+  "dependencies": {
+    "beepboop-botkit": "^1.4.1",
+    "botkit": "~0.2.2"
+  }
+}

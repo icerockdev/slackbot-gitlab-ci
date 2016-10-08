@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/icerockdev/slackbot-gitlab-ci#readme",
   "dependencies": {
+    "gitlab": "^1.6.0",
     "beepboop-botkit": "^1.4.1",
     "botkit": "~0.2.2"
   }
